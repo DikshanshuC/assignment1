@@ -1,0 +1,108 @@
+<!-- 
+    
+ -->
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oh My Camera - Capturing Moments, Creating Memories</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: #f4f4f4;
+    }
+
+    h1 {
+      color: #007bff;
+      font-size: 36px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    #search-container {
+      display: flex;
+      margin-top: 20px;
+    }
+
+    #search-bar {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    #search-button {
+      background-color: #007bff;
+      color: #fff;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #search-results {
+      margin-top: 20px;
+      max-width: 600px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Oh My Camera - Capturing Moments, Creating Memories</h1>
+
+  <div id="search-container">
+    <input type="text" id="search-bar" placeholder="Search for photos...">
+    <button id="search-button" onclick="searchPhotos()">Search</button>
+  </div>
+
+  <div id="search-results">
+    <!-- Search results will be displayed here -->
+  </div>
+
+  <script>
+    function searchPhotos() {
+      // Get the value from the search bar
+      var searchTerm = document.getElementById('search-bar').value;
+
+      // Perform your search logic here (this is a placeholder)
+      var searchResults = performSearch(searchTerm);
+
+      // Display the search results
+      displayResults(searchResults);
+    }
+
+    function performSearch(searchTerm) {
+      // Placeholder function for search logic
+      // Replace this with your actual search logic
+      // You may want to make an AJAX request to a server for real-time search
+      return ["photo1", "Photo 2", "Photo 3"]; // Example search results
+    }
+
+    function displayResults(results) {
+      var resultsContainer = document.getElementById('search-results');
+      resultsContainer.innerHTML = '';
+
+      if (results.length === 0) {
+        resultsContainer.innerHTML = 'No results found.';
+      } else {
+        results.forEach(function (result) {
+          var resultElement = document.createElement('p');
+          resultElement.textContent = result;
+          resultsContainer.appendChild(resultElement);
+        });
+      }
+    }
+  </script>
+
+</body>
+
+</html>

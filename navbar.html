@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    nav{
+        margin: 0;
+        padding: 0;
+        position: fixed;
+        bottom: 0;
+        top:0;
+
+    }
+    nav ul{
+        border: 1px solid black;
+        margin: 0;
+        list-style-type: none;
+        padding: 0;
+    }
+    nav ul li{
+        margin-right: 1px solid red;
+        background-color: rgb(143, 18, 62);
+        float: left;
+        box-shadow: 1px 1px 3px rgb(5, 89, 37);
+        text-align: center;
+        position: relative;
+    }
+    nav ul li:last-child{
+        border: none;
+    }
+    nav ul li a{
+        text-decoration: none;
+        display: block;
+        color: rgb(202, 125, 11);
+        font-size: 50px;
+        font-weight: 800;
+    }
+    nav ul li:hover a{
+        color: rgb(9, 42, 62);
+        transition: 1s;
+    }
+    li ul{
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    li:hover ul{
+        display: block;
+    }
+
+</style>
+<body>
+    <nav> 
+        <ul>
+            <li> <a href=#>HOME</a></li>
+            <li> <a href=#>about us</a>
+            <ul> <li> <a  href=#>academics</a></li></ul>
+            </li>
+            <li> <a href=#>Campus</a></li>
+            <li> <a href=#>research</a></li>
+        </ul>
+    </nav>
+    
+</body>
+</html>
